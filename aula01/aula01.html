@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como inserir o Javascript dentro do html</title>
+    <script>
+        function myAlert(){
+            alert("Este arquivo está embutido dentro do head")
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <p>Podemos inserir o JavaScript dentro do HTML de forma interna - no próṕrio código HTML, ou de forma externa - incluindo um arquivo externo.</p>
+
+        <h3>Inserindo o JavaScript dentro do HTML na tag  head:</h3>
+        <p>
+            Dentro do nosso &lt;head&gt; abrimos a tag &lt;script&gt; e inserimos o nosso código lá.
+        </p>
+        <button onclick="myAlert()">Clique aqui</button>
+
+        <h3>Colocando o JavaScript de forma externa:</h3>
+        <p>
+            Ao colocar ele de forma externa, podemos colocar ele no final do arquivo html com a tag: &lt;script src=caminho-do-arquivo.js"&gt;. Isso faz com que a página seja carregada primeiro e só depois o arquivo js é renderizado.
+        </p>
+        <p>
+            Também podemos colocar ele dentro da tag head, mas ele será inicializado antes do resto da página, o que pode gerar bugs. Para evitar bugs e deixar o código mais organizado, deixando o link de arquivos dentro do head, podemos adicionar o atributo defer dentro da tag. Ficaria assim:
+            &lt;script src='caminho-js' defer&gt;
+        </p>
+    </main>
+</body>
+</html>
